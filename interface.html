@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MultiChat</title>
+    </head>
+    <body>
+        <div class="chatContainer">
+            <div class="twitchChatContainer" style="z-index: 1000;">
+                <iframe src="https://twitch.tv/embed/<yourStreamusername>/chat?parent=localhost" frameborder="0" style="z-index: 1001;"></iframe>
+                <iframe src="https://twitch.tv/embed/<yourStreamusername2>/chat?parent=localhost" frameborder="0" style="z-index: 1001;"></iframe>
+                <!-- Add more if you like-->
+            </div>
+            <div class="tiktokChatContainer">
+                <iframe src="https://tikfinity.zerody.one/widget/chat?cid=<yourTikfinityID>" frameborder="0"></iframe>
+                <iframe src="https://tikfinity.zerody.one/widget/gifts?cid=<yourTikfinityID>" frameborder="0"></iframe>
+            </div>
+        </div>
+        
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+            .chatContainer {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                width: calc(100vw - 20px);
+                height: calc(100vh - 20px);
+                padding: 10px;
+            }
+            .twitchChatContainer {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 5px;
+                width: 100%;
+                min-height: 75%;
+                max-height: 2400px;
+                height: auto;
+            }
+            .tiktokChatContainer {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 5px;
+                width: 100%;
+                height: auto;
+            }
+            iframe {
+                position: relative;
+                flex-grow: 1;
+                height: 100%;
+            }
+        </style>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "name": "stream-chat",
+  "version": "1.0.0",
+  "description": "Just a Small MultiChat App to show Twitch and Tiktok Chats",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron index.js",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "de.streamchat",
+    "productName": "StreamChat (MultiChat)",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "extraResources": [],
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.1.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "electron": "^36.1.0",
+    "electron-builder": "^26.0.12"
+  }
+}
